@@ -537,7 +537,7 @@ HTML 表格用`<table>`标签来定义。
 </table>
 ```
 
-### HTML 表格和边框属性(border)
+### 表格和边框属性(border)
 
 使用边框属性border来显示一个带有边框的表格：
 
@@ -778,7 +778,7 @@ height 和 width 属性用来定义iframe标签的高度与宽度。
 <iframe loading="lazy" src="demo_iframe.htm" width="200" height="200"></iframe>
 ```
 
-### iframe - 移除边框
+### iframe-移除边框
 
 frameborder 属性用于定义iframe表示是否显示边框。
 
@@ -788,7 +788,7 @@ frameborder 属性用于定义iframe表示是否显示边框。
 <iframe src="demo_iframe.htm" frameborder="0"></iframe>
 ```
 
-### 使用 iframe 来显示目标链接页面
+### iframe目标链接页面
 
 iframe 可以显示一个目标链接的页面，目标链接的属性必须使用 iframe 的属性
 
