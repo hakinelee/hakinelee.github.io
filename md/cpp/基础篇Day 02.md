@@ -385,10 +385,10 @@ int main() {
 ```cpp
 //结构体定义
 struct student {
-//成员列表
-string name;  //姓名
-int age;      //年龄
-int score;    //分数
+	//成员列表
+	string name;  //姓名
+	int age;      //年龄
+	int score;    //分数
 }stu3; //结构体变量创建方式3 
 
 int main() {
