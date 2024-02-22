@@ -1,11 +1,11 @@
 <!-- ![logo](_media/logo.png) -->
 
-<h1 style="font-size: 3rem;
+<!-- <h1 style="font-size: 3rem;
     font-weight:bold;
     margin: 0px;
-    padding: 0px;">hakine的博客</h1>
+    padding: 0px;">hakine的博客</h1> -->
 
-<h2 style="font-size: 2rem;">HAKINE'S BLOG</h2>
+<h2 style="font-size: 3rem;">HAKINE'S BLOG</h2>
 
 ## 记录一些自己的心得与感触
 

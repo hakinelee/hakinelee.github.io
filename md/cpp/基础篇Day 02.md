@@ -32,13 +32,13 @@ int main() {
     // 逐个输出
     // cout << score2[0] << endl;
     // 一个一个输出太麻烦，因此可以利用循环进行输出
-    for(int i = 0; i < 10; i++) {
+    for (int i = 0; i < 10; i++) {
         cout << score2[i] << endl;
     }
 
     // 定义方式3：数据类型 数组名[] =  {值1, 值2, 值3, ...};
     int score3[] = {100, 90, 80, 70, 60, 50, 40, 30, 20, 10};
-    for(int i = 0; i < 10; i++) {
+    for (int i = 0; i < 10; i++) {
         cout << score3[i] << endl;
     }
     system("pause");
@@ -82,16 +82,16 @@ int main() {
 ```cpp
 int main() {
     int arr[9] = {4, 2, 8, 0, 5, 7, 1, 3, 9};
-    for(int i = 0; i < 9 - 1; i++) {
-        for(int j = 0; j < 9 - 1 - i; j++) {
-            if(arr[j] > arr[j + 1]) {
+    for (int i = 0; i < 9 - 1; i++) {
+        for (int j = 0; j < 9 - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
                 int temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
             }
         }
     }
-    for(int i = 0; i < 9; i++) {
+    for (int i = 0; i < 9; i++) {
         cout << arr[i] << endl;
     }  
     system("pause");
@@ -120,16 +120,15 @@ int main() {
     arr[1][1] = 5;
     arr[1][2] = 6;
 
-    for(int i = 0; i < 2; i++) {
-        for(int j = 0; j < 3; j++) {
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
             cout << arr[i][j] << " ";
         }
         cout << endl;
     }
 
     // 方式2：数据类型 数组名[行数][列数] = {{数据1, 数据2}, {数据3, 数据4}};
-    int arr2[2][3] =
-    {
+    int arr2[2][3] = {
         {1,2,3},
         {4,5,6}
     };
@@ -154,8 +153,7 @@ int main() {
 ```cpp
 int main() {
     // 二维数组数组名
-    int arr[2][3] =
-    {
+    int arr[2][3] = {
     	{1, 2, 3},
     	{4, 5, 6}
 	};
@@ -259,6 +257,7 @@ void swap(int num1, int num2) {
     cout << "num2 = " << num2 << endl;	// 10
     // return ; 当函数声明时候，不需要返回值，可以不写return
 }
+
 int main() {
     int a = 10, b = 20;
     swap(a, b);
@@ -636,11 +635,11 @@ int main() {
 通过冒泡排序的算法，将数组中的英雄按照年龄进行升序排序，最终打印排序后的结果。
 五名英雄信息如下：
 ```c
-{"刘备",23,"男"},
-{"关羽",22,"男"},
-{"张飞",20,"男"},
-{"赵云",21,"男"},
-{"貂蝉",19,"女"},
+{"刘备", 23, "男"},
+{"关羽", 22, "男"},
+{"张飞", 20, "男"},
+{"赵云", 21, "男"},
+{"貂蝉", 19, "女"},
 ```
 **示例：**
 ```c
@@ -671,11 +670,11 @@ void printHeros(hero arr[], int len) {
 
 int main() {
 	struct hero arr[5] = {
-		{"刘备",23,"男"},
-		{"关羽",22,"男"},
-		{"张飞",20,"男"},
-		{"赵云",21,"男"},
-		{"貂蝉",19,"女"},
+		{"刘备", 23, "男"},
+		{"关羽", 22, "男"},
+		{"张飞", 20, "男"},
+		{"赵云", 21, "男"},
+		{"貂蝉", 19, "女"},
 	};
 	int len = sizeof(arr) / sizeof(hero); //获取数组元素个数
 	bubbleSort(arr, len); //排序
