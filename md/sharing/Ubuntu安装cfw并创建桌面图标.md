@@ -95,7 +95,7 @@ Type=Application
 >
 > - Icon 图如下：
 >
->   ![下载cfw](../../assets/img/sharing/download_1.png)
+>   ![cfw_logo](../../assets/img/sharing/clash.png)
 >
 > - ❗记得要把 Icon 图放在 Clash 文件夹内
 
