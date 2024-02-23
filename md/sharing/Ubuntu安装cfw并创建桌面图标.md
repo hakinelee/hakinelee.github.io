@@ -1,5 +1,9 @@
 # Ubuntu安装cfw并创建桌面图标
 
+> 🔔温馨提示：
+>
+> 本文最后更新于 2024-02-23，若内容或图片失效，请留言反馈。部分素材来源于网络，如疏漏未标注原文地址或侵权，不小心影响到您的利益，请联系我们进行删除。
+
 cfw 软件全称 `clash for windows`，看到名字不要以为只能在 windows 上安装，它支持 `mac/linux/windows/android`。
 
 本篇主要讲 cfw 这个软件如何加入 Ubuntu 的软件中心与创建桌面图标。
@@ -124,4 +128,4 @@ sudo chown hakine clash.desktop
 5. [clash_for_windows_pkg下载](https://archive.org/download/clash_for_windows_pkg)
 6. [Clash中文网](https://clashcn.com/clash-for-windows)
 
->部分文章来源于网络，如疏漏未标注原文地址或侵权，请联系进行删除。
+>部分素材来源于网络，如疏漏未标注原文地址或侵权，请联系进行删除。
