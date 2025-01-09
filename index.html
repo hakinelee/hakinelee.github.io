@@ -105,6 +105,10 @@
         bottom: 15,   // 按钮距离窗口底部距离
         offset: 500   // 页面滚动多少距离后显示按钮，当auto配置为true时才有效果
       },
+      // 支持绘图
+      plantuml: {
+        skin: 'default',
+      },
     }
   </script>
   <!-- Docsify v4 -->
@@ -136,6 +140,8 @@
               "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by Lee",
               "success"); };
   </script>
+  <!-- 绘图 -->
+  <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
   <!-- 代码高亮 -->
   <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
