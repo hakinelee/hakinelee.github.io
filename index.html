@@ -97,6 +97,14 @@
       },
       // 外部链接打开方式
       externalLinkTarget: '_self', // default: '_blank'
+      // 支持回到顶部
+      scrollToTop: {
+        auto: true,   // 自动隐藏按钮
+        text: 'Top',  // 按钮文字
+        right: 15,    // 按钮距离窗口右侧距离
+        bottom: 15,   // 按钮距离窗口底部距离
+        offset: 500   // 页面滚动多少距离后显示按钮，当auto配置为true时才有效果
+      },
     }
   </script>
   <!-- Docsify v4 -->
@@ -118,7 +126,8 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
   <!-- Social Share 分享插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
-  </script>
+  <!-- 支持回到顶部 -->
+  <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
   <!-- 复制提醒 -->
   <!-- <script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script> -->
   <!-- <script>
