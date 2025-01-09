@@ -14,6 +14,7 @@
   - 📖 技术分享
 
     - [Ubuntu安装cfw并创建桌面图标](/md/sharing/Ubuntu安装cfw并创建桌面图标.md)
+    - [测试](/md/sharing/测试.md)
 
   - 📕 服务端笔记
 
