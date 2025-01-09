@@ -73,15 +73,39 @@
         nextText: '下一章节',
       },
       // 字数统计
-      count: {
-        countable: true,
-        position: 'top',
-        margin: '20px',
-        float: 'right',
-        fontsize: '0.9em',
-        color: 'rgb(90,90,90)',
-        language: 'chinese',
-        isExpected: true
+      // count: {
+      //   countable: true,
+      //   position: 'top',
+      //   margin: '20px',
+      //   float: 'right',
+      //   fontsize: '0.9em',
+      //   color: 'rgb(90,90,90)',
+      //   language: 'chinese',
+      //   isExpected: true
+      // },
+      ountWords: {
+        countable: true,  // 是否使用本插件
+        position: "top",  // 展示位置
+        margin: "10px",
+        float: "right",
+        fontsize: "0.9em",
+        color: "rgb(90,90,90)",
+        localization: {   // 是否支持国际化
+            words: {
+                '/zh-cn/': '字',
+                '/': 'words'
+            },
+            minute: {
+                '/zh-cn/': '分钟',
+                '/': 'min'
+            },
+        },
+        // Or
+        // localization: {
+        //     word: 'words',
+        //     minute: 'min'
+        // }
+        isExpected: true,
       },
       // 页脚
       footer: {
@@ -117,6 +141,19 @@
         right: 26,
         svgColor: '#7d7b75',
       },
+      // 新版Gitalk
+      gitalkWithFooter: {
+        footerInnerHtml: "<p>text</p>",
+        gitalkConfig: {
+            clientID: '82b6c82b8c19e91e1b42', // Your Client Id
+            clientSecret: '7101364eb8e3d7243426bcb071299c1423135c44', // Your Client secret
+            repo: 'gitalk-comments',
+            owner: 'hakinelee',
+            admin: ['hakinelee'],
+            // facebook-like distraction free mode
+            distractionFreeMode: false,
+        }
+      },
     }
   </script>
   <!-- Docsify v4 -->
@@ -133,7 +170,8 @@
   <!-- 分页导航 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <!-- 字数统计 -->
-  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!-- <script src="//unpkg.com/docsify-count/dist/countable.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/gh/pikapikapikaori/docsify-enhanced-word-count@latest/src/countWords.js"></script>
   <!-- 暗黑模式 -->
   <script src="https://cdn.jsdelivr.net/gh/pikapikapikaori/docsify-simple-dark-mode@latest/src/switchLightDarkMode.js"></script>
   <!-- 侧边栏折叠 -->
@@ -213,9 +251,10 @@
   </script>
 
   <!-- gitalk支持-->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/gh/pikapikapikaori/docsify-gitalk-with-footer@latest/src/gitalkWithFooter.js"></script>
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-  <script>
+  <!-- <script>
     const gitalk = new Gitalk({
       clientID: '82b6c82b8c19e91e1b42',   // Github Application Client ID
       clientSecret: '7101364eb8e3d7243426bcb071299c1423135c44',   // Github Application Client Secret
@@ -227,7 +266,7 @@
       // facebook-like distraction free mode
       distractionFreeMode: false  // 无干扰模式
     })
-  </script>
+  </script> -->
 </body>
 
 </html>
