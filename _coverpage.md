@@ -6,31 +6,13 @@
     padding: 0px;">hakine的博客</h1> -->
 
 <!-- <h2 style="font-size: 3rem;">HAKINE'S BLOG</h2> -->
-<div id=Title2 style="color: gray; font: bold 50px arial; position: absolute; visibility:hidden; top:200px; left:300px;">
-    <p>HAKINE'S BLOG</p>
-</div>
-<div id=Title1 style="color: white; font: bold 50px arial; position: absolute; visibility:hidden; top:200px; left:300px">
-    <p>HAKINE'S BLOG</p>
-</div>
-<script>
-var Tle2="document.all.Title2.style";
-var Tle1="document.all.Title1.style";
-eval(Tle2).top=eval(Tle1).top=document.body.clientHeight/2 - 20;
-eval(Tle2).left=eval(Tle1).left=document.body.clientWidth/2 - 150;
-function Fade(){   
-	var BackX = Math.random()*10;
-	var BackY = Math.random()*5;   
-	if(Math.random()<0.5){   
-		BackX = -BackX;   
-		BackY = -BackY;   
-	}   
-	eval(Tle1).visibility = eval(Tle2).visibility = "visible";   
-	eval(Tle2).left = parseInt(eval(Tle1).left) + BackX;   
-	eval(Tle2).top = parseInt(eval(Tle1).top)  + BackY;   
-	var FadeID = setTimeout("Fade()",50);   
-}
-Fade();
-</script>
+<svg width="520" height="240" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <text transform="matrix(2.11354 0 0 3.20401 -605.426 -325.296)" stroke="#000" xml:space="preserve" text-anchor="start" font-family="'Caveat'" font-size="24" id="svg_2" y="144" x="333" stroke-width="0" fill="#000000">HAKINE'S BLOG</text>
+ </g>
+</svg>
 
 ## 记录一些自己的心得与感触
 
