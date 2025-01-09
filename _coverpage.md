@@ -5,7 +5,32 @@
     margin: 0px;
     padding: 0px;">hakine的博客</h1> -->
 
-<h2 style="font-size: 3rem;">HAKINE'S BLOG</h2>
+<!-- <h2 style="font-size: 3rem;">HAKINE'S BLOG</h2> -->
+<div id=Title2 style="color: gray; font: bold 50px arial; position: absolute; visibility:hidden; top:200px; left:300px;">
+    <p>HAKINE'S BLOG</p>
+</div>
+<div id=Title1 style="color: white; font: bold 50px arial; position: absolute; visibility:hidden; top:200px; left:300px">
+    <p>HAKINE'S BLOG</p>
+</div>
+<script>
+var Tle2="document.all.Title2.style";
+var Tle1="document.all.Title1.style";
+eval(Tle2).top=eval(Tle1).top=document.body.clientHeight/2 - 20;
+eval(Tle2).left=eval(Tle1).left=document.body.clientWidth/2 - 150;
+function Fade(){   
+	var BackX = Math.random()*10;
+	var BackY = Math.random()*5;   
+	if(Math.random()<0.5){   
+		BackX = -BackX;   
+		BackY = -BackY;   
+	}   
+	eval(Tle1).visibility = eval(Tle2).visibility = "visible";   
+	eval(Tle2).left = parseInt(eval(Tle1).left) + BackX;   
+	eval(Tle2).top = parseInt(eval(Tle1).top)  + BackY;   
+	var FadeID = setTimeout("Fade()",50);   
+}
+Fade();
+</script>
 
 ## 记录一些自己的心得与感触
 
