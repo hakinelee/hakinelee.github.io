@@ -17,7 +17,8 @@
   <!-- gitalk支持-->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
   <!-- alert 样式 -->
-  <link rel="stylesheet" href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css' media='all' />
+  <link rel="stylesheet" href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css'
+    media='all' />
   <style type="text/css">
     body:not(.ready) {
       overflow: auto;
@@ -80,16 +81,16 @@
         float: "right",
         fontsize: "0.9em",
         color: "rgb(90,90,90)",
-        language: 'chinese',
+        // language: 'chinese',
         localization: {   // 是否支持国际化
-            words: {
-                '/': '字',
-                '/en/': 'words'
-            },
-            minute: {
-                '/': '分钟',
-                '/en/': 'min'
-            },
+          // words: {
+          //   '/': '',
+          // },
+          // minute: {
+          //   '/': ''
+          // },
+          words: "字",
+          minute: "分钟",
         },
         // Or
         // localization: {
@@ -129,13 +130,13 @@
       gitalkWithFooter: {
         footerInnerHtml: "<div style='text-align: center; max-width: 800px; width: 80%; align-self: center; padding: 30px 15px 20px; margin: 0 auto'><div style='border-top: 1px solid var(--global-border-default-color,#eee);'><br><p><small> Copyright &copy; 2021 - 至今 &nbsp 💖 &nbsp Mr.Lee  - All Rights Reserved.</small></p><div/></div>",
         gitalkConfig: {
-            clientID: 'Ov23liZkGsGQzyRhh6L6', // Your Client Id
-            clientSecret: '1c1468ec5330dee47201a78681960bc68e87a762', // Your Client secret
-            repo: 'blog-comments',
-            owner: 'hakinelee',
-            admin: ['hakinelee'],
-            // facebook-like distraction free mode
-            distractionFreeMode: false,
+          clientID: 'Ov23liZkGsGQzyRhh6L6', // Your Client Id
+          clientSecret: '1c1468ec5330dee47201a78681960bc68e87a762', // Your Client secret
+          repo: 'blog-comments',
+          owner: 'hakinelee',
+          admin: ['hakinelee'],
+          // facebook-like distraction free mode
+          distractionFreeMode: false,
         }
       },
     }
@@ -149,43 +150,46 @@
 
   <!-- 引入全文搜索 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  
+
   <!-- 引入图片缩放 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  
+
   <!-- 引入复制到剪贴板 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <!-- 分页导航 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  
+
   <!-- 字数统计 -->
   <!-- <script src="//unpkg.com/docsify-count/dist/countable.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/gh/pikapikapikaori/docsify-enhanced-word-count@latest/src/countWords.js"></script>
-  
+  <script
+    src="https://cdn.jsdelivr.net/gh/pikapikapikaori/docsify-enhanced-word-count@latest/src/countWords.js"></script>
+
   <!-- 暗黑模式 -->
-  <script src="https://cdn.jsdelivr.net/gh/pikapikapikaori/docsify-simple-dark-mode@latest/src/switchLightDarkMode.js"></script>
-  
+  <script
+    src="https://cdn.jsdelivr.net/gh/pikapikapikaori/docsify-simple-dark-mode@latest/src/switchLightDarkMode.js"></script>
+
   <!-- 侧边栏折叠 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  
+
   <!-- Social Share 分享插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
-  
+
   <!-- 支持回到顶部 -->
   <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
-  
+
   <!-- 复制提醒 -->
   <script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
   <script>
     document.body.oncopy = function () {
       swal("复制成功 🎉",
-              "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by Lee",
-              "success"); };
+        "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by Lee",
+        "success");
+    };
   </script>
-  
+
   <!-- 绘图 -->
   <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
-  
+
   <!-- 代码高亮 -->
   <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
@@ -200,14 +204,14 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-properties.min.js"></script>
   <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/matlab.min.js"></script> -->
-  
+
   <!-- MathJax -->
   <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
-  
+
   <!-- 红心点击特效 -->
   <!-- <script src="//cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script> -->
-  
+
   <!-- 访问量统计 -->
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
@@ -230,7 +234,8 @@
 
   <!-- docsify-gitalk-with-footer -->
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/pikapikapikaori/docsify-gitalk-with-footer@latest/src/gitalkWithFooter.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/pikapikapikaori/docsify-gitalk-with-footer@latest/src/gitalkWithFooter.js"></script>
 </body>
 
 </html>
