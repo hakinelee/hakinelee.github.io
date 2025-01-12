@@ -327,3 +327,7 @@ theme: hexo-theme-matery
 - [ ] 写博客：hexo n "post"
 - [ ] 部署到服务器：hexo d
 - [ ] 如何换主题：_config.yml
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<div class="social-share"></div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>

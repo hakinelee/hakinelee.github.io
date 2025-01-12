@@ -13,8 +13,9 @@
   
   - 📖 技术分享
 
-    - [Ubuntu安装cfw并创建桌面图标](/md/sharing/Node1.md)
-    - [Ubuntu安装NVM](/md/sharing/Node2.md)
+    - [Ubuntu安装cfw并创建桌面图标](/md/sharing/Note1.md)
+    - [Ubuntu安装NVM](/md/sharing/Note2.md)
+    - [GitHub Page + Hexo 博客](/md/sharing/Note3.md)
     - [测试](/md/sharing/test.md)
 
   - 📕 服务端笔记
