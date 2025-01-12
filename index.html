@@ -73,16 +73,6 @@
         nextText: '下一章节',
       },
       // 字数统计
-      // count: {
-      //   countable: true,
-      //   position: 'top',
-      //   margin: '20px',
-      //   float: 'right',
-      //   fontsize: '0.9em',
-      //   color: 'rgb(90,90,90)',
-      //   language: 'chinese',
-      //   isExpected: true
-      // },
       ountWords: {
         countable: true,  // 是否使用本插件
         position: "top",  // 展示位置
@@ -93,12 +83,12 @@
         language: 'chinese',
         localization: {   // 是否支持国际化
             words: {
-                '/zh-cn/': '字',
-                '/': 'words'
+                '/': '字',
+                '/en/': 'words'
             },
             minute: {
-                '/zh-cn/': '分钟',
-                '/': 'min'
+                '/': '分钟',
+                '/en/': 'min'
             },
         },
         // Or
@@ -108,7 +98,7 @@
         // }
         isExpected: true,
       },
-      //Latex设置
+      // Latex设置
       latex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']],
         displayMath: [['$$', '$$']],
@@ -139,9 +129,9 @@
       gitalkWithFooter: {
         footerInnerHtml: "<div style='text-align: center; max-width: 800px; width: 80%; align-self: center; padding: 30px 15px 20px; margin: 0 auto'><div style='border-top: 1px solid var(--global-border-default-color,#eee);'><br><p><small> Copyright &copy; 2021 - 至今 &nbsp 💖 &nbsp Mr.Lee  - All Rights Reserved.</small></p><div/></div>",
         gitalkConfig: {
-            clientID: '82b6c82b8c19e91e1b42', // Your Client Id
-            clientSecret: '7101364eb8e3d7243426bcb071299c1423135c44', // Your Client secret
-            repo: 'gitalk-comments',
+            clientID: 'Ov23liZkGsGQzyRhh6L6', // Your Client Id
+            clientSecret: '1c1468ec5330dee47201a78681960bc68e87a762', // Your Client secret
+            repo: 'blog-comments',
             owner: 'hakinelee',
             admin: ['hakinelee'],
             // facebook-like distraction free mode
@@ -153,27 +143,37 @@
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <!-- <script src="//unpkg.com/docsify/lib/docsify.min.js"></script> -->
+
   <!-- emoji表情支持 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+
   <!-- 引入全文搜索 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  
   <!-- 引入图片缩放 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  
   <!-- 引入复制到剪贴板 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <!-- 分页导航 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  
   <!-- 字数统计 -->
   <!-- <script src="//unpkg.com/docsify-count/dist/countable.js"></script> -->
   <script src="https://cdn.jsdelivr.net/gh/pikapikapikaori/docsify-enhanced-word-count@latest/src/countWords.js"></script>
+  
   <!-- 暗黑模式 -->
   <script src="https://cdn.jsdelivr.net/gh/pikapikapikaori/docsify-simple-dark-mode@latest/src/switchLightDarkMode.js"></script>
+  
   <!-- 侧边栏折叠 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  
   <!-- Social Share 分享插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+  
   <!-- 支持回到顶部 -->
   <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
+  
   <!-- 复制提醒 -->
   <script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
   <script>
@@ -182,8 +182,10 @@
               "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by Lee",
               "success"); };
   </script>
+  
   <!-- 绘图 -->
   <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
+  
   <!-- 代码高亮 -->
   <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
@@ -198,11 +200,14 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-properties.min.js"></script>
   <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/matlab.min.js"></script> -->
+  
   <!-- MathJax -->
   <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
+  
   <!-- 红心点击特效 -->
   <!-- <script src="//cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script> -->
+  
   <!-- 访问量统计 -->
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 

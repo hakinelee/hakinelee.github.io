@@ -15,6 +15,7 @@
 
     - [Ubuntu安装cfw并创建桌面图标](/md/sharing/Ubuntu18.04安装cfw并创建桌面图标.md)
     - [测试](/md/sharing/测试.md)
+    - [Note](/md/sharing/Node.md)
 
   - 📕 服务端笔记
 

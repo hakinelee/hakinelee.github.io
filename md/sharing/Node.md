@@ -93,3 +93,7 @@ nvm list    查看本地已安装的node版本，同时也会显示当前使用�
 
 [服务器Ubuntu安装nvm踩坑篇-CSDN博客](https://blog.csdn.net/handsomezhanghui/article/details/111872159)
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<div class="social-share"></div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
