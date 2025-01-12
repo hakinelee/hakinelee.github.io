@@ -1,4 +1,4 @@
-## 初识C语言
+## C语言
 
 
 ### 1. C语言简介
@@ -245,7 +245,6 @@ enum 枚举名 { 枚举元素1, 枚举元素2, …… };
 ```
 
 
-
 ### 5. 字符串+转义字符+注释
 
 #### 5.1 字符串
@@ -285,7 +284,8 @@ int main()
 
 ```c
 #include <stdio.h>
-int main() {
+int main()
+{
 	printf("c:\code\test.c\n");
 	return 0;
 }
@@ -312,7 +312,8 @@ int main() {
 
 ```C
 #include <stdio.h>
-int main() {
+int main()
+{
     // 问题 1 ：在屏幕上打印一个单引号'，怎么做？
     // 问题 2 ：在屏幕上打印一个字符串，字符串的内容是一个双引号“，怎么做？
     printf("%c\n", '\'');
@@ -325,7 +326,8 @@ int main() {
 ```c
 // 程序输出什么？
 #include <stdio.h>
-int main() {
+int main()
+{
     printf("%d\n", strlen("abcdef"));
     // \62被解析成一个转义字符
     printf("%d\n", strlen("c:\test\628\test.c"));
@@ -342,15 +344,18 @@ int main() {
 
 ```c
 #include <stdio.h>
-int Add(int x, int y) {
+int Add(int x, int y)
+{
 	return x+y;
 }
 /* C语言风格注释
-int Sub(int x, int y) {
+int Sub(int x, int y)
+{
 	return x-y;
 }
 */
-int main() {
+int main()
+{
 	// C++注释风格
 	// int a = 10;
 	// 调用Add函数，完成加法
@@ -368,8 +373,6 @@ int main() {
 
 
 
-
-
 ### 6. 选择语句
 
 如果你好好学习，校招时拿一个好offer，走上人生巅峰。
@@ -380,14 +383,17 @@ int main() {
 
 ```c
 #include <stdio.h>
-int main() {
+int main()
+{
     int coding = 0;
     printf("你会去敲代码吗？（选择1 or 0）:>");
     scanf("%d", &coding);
-    if(coding == 1) {
+    if(coding == 1)
+    {
     	prinf("坚持，你会有好offer\n");
     }
-    else {
+    else
+    {
     	printf("放弃，回家卖红薯\n");
     }
     return 0;
@@ -399,23 +405,27 @@ int main() {
 
 ### 7. 循环语句
 
+有些事必须一直做，比如我日复一日的讲课，比如大家，日复一日的学习。
+
 C语言中如何实现循环呢？
 
 - while语句-讲解
-- for语句
-- do ... while语句
+- for语句（后期讲）
+- do ... while语句（后期讲）
 
 ```c
-// while循环的实例
+//while循环的实例
 #include <stdio.h>
-int main() {
+int main()
+{
     printf("加入比特\n");
     int line = 0 ;
-    while(line <= 20000) {
+    while(line<= 20000)
+    {
     	line++;
     	printf("我要继续努力敲代码\n");
     }
-    if(line > 20000)
+    if(line> 20000)
     	printf("好offer\n");
     return 0;
 }
@@ -429,7 +439,8 @@ int main() {
 
 ```c
 #include <stdio.h>
-int main() {
+int main()
+{
     int num1 = 0;
     int num2 = 0;
     int sum = 0;
@@ -441,11 +452,13 @@ int main() {
 }
 # 上述代码，写成函数如下：
 #include <stdio.h>
-int Add(int x, int y) {
+int Add(int x, int y)
+{
 	int z = x + y;
 	return z;
 }
-int main() {
+int main()
+{
     int num1 = 0;
     int num2 = 0;
     int sum = 0;
@@ -620,29 +633,35 @@ int main()
 ``` c
 //代码 1
 #include <stdio.h>
-void test() {
+void test()
+{
     int i = 0;
     i++;
     printf("%d ", i);
 }
-int main() {
+int main()
+{
     int i = 0;
-    for(i = 0; i < 10; i++) {
+    for(i = 0; i < 10; i++)
+    {
     	test();
     }
     return 0;
 }
 //代码 2
 #include <stdio.h>
-void test() {
+void test()
+{
     // static修饰局部变量
     static int i = 0;
     i++;
     printf("%d ", i);
 }
-int main() {
+int main()
+{
     int i = 0;
-    for(i = 0; i < 10; i++) {
+    for(i = 0; i < 10; i++)
+    {
     	test();
     }
     return 0;
@@ -663,7 +682,8 @@ int main() {
 // add.c
 int g_val = 2018 ;
 // test.c
-int main() {
+int main()
+{
 	printf("%d\n", g_val);
 	return 0;
 }
@@ -672,7 +692,8 @@ int main() {
 // add.c
 static int g_val = 2018;
 // test.c
-int main() {
+int main()
+{
 	printf("%d\n", g_val);
 	return 0;
 }
@@ -689,11 +710,13 @@ int main() {
 ```c
 // 代码 1
 // add.c
-int Add(int x, int y) {
+int Add(int x, int y)
+{
 	return c + y;
 }
 // test.c
-int main() {
+int main()
+{
 	printf("%d\n", Add( 2 , 3 ));
 	return 0;
 }
@@ -701,11 +724,13 @@ int main() {
 ```c
 // 代码 2
 // add.c
-static int Add(int x, int y) {
+static int Add(int x, int y)
+{
 	return c + y;
 }
 // test.c
-int main() {
+int main()
+{
 	printf("%d\n", Add( 2 , 3 ));
 	return 0;
 }
@@ -730,7 +755,8 @@ int main() {
 #define ADD(x, y) ((x)+(y))
 
 #include <stdio.h>
-int main() {
+int main()
+{
 	int sum = ADD( 2 , 3 );
 	printf("sum = %d\n", sum);
     sum = 10 *ADD( 2 , 3 );
@@ -760,7 +786,8 @@ int main() {
 
 ```c
 #include <stdio.h>
-int main() {
+int main()
+{
     int num = 10;
     &num;	// 取出num的地址
     // 注：这里num的 4 个字节，每个字节都有地址，取出的是第一个字节的地址（较小的地址）
@@ -784,7 +811,8 @@ p = &num;
 
 ```c
 #include <stdio.h>
-int main() {
+int main()
+{
 	int num = 10;
 	int *p = &num;
 	*p = 20;
@@ -795,7 +823,8 @@ int main() {
 
 ```c
 #include <stdio.h>
-int main() {
+int main()
+{
     char ch = 'w';
     char* pc = &ch;
     *pc = 'q';
@@ -813,7 +842,8 @@ int main() {
 // 指针变量的大小取决于地址的大小
 // 32位平台下地址是 32 个bit位（即 4 个字节）
 // 64位平台下地址是 64 个bit位（即 8 个字节）
-int main() {
+int main()
+{
     printf("%d\n", sizeof(char *));
     printf("%d\n", sizeof(short *));
     printf("%d\n", sizeof(int *));
@@ -836,7 +866,8 @@ int main() {
 例如：
 
 ```c
-struct Stu {
+struct Stu
+{
     char name[20];	// 名字
     int age;  		// 年龄
     char sex[5];  	// 性别

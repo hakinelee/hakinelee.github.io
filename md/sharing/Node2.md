@@ -19,8 +19,6 @@ mv nvm .nvm
 
 > 我们安装好NVM以后，我们需要配置到环境变量
 
-
-
 2. 现在使用`nvm --version`，如果提示`nvm command not found`还是有问题。
 
 解决`nvm command not found`问题，进入`.nvm`文件夹，新建`.bash_profile`
@@ -31,8 +29,6 @@ touch .bash_profile //新建文件
 vim .bash_profile //打开文件
 ```
 
-
-
 3. 在环境变量内，追加以下内容：
 
 ```bash
@@ -40,16 +36,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 ```
 
-
-
 4. 然后关闭文件，执行文件。终端输入：`source .bash_profile`
 
-
-
 5. 终端输入：`nvm --version`出现版本号表示安装成功，就不会报`command not find`了。
-
-
-
 
 ## 配置国内源
 
@@ -62,9 +51,7 @@ export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node/
 
 需要长期使用，就配置到配置文件里。
 
-
-
-##nvm常用命令
+## nvm常用命令
 
 ```bash
 nvm v    查看nvm版本 
@@ -84,15 +71,11 @@ nvm use 9.7.1    切换node版本至9.7.1
 nvm list    查看本地已安装的node版本，同时也会显示当前使用的node版本
 ```
 
-
-
-
 ## 参考链接
 
 [Windows/macOS/Linux上安装Node.js，并使用NVM管理多版本Node.js - 雨月空间站 (mintimate.cn)](https://www.mintimate.cn/2021/07/26/nvmNode/#Opt2-Git%E5%AE%89%E8%A3%85)
 
 [服务器Ubuntu安装nvm踩坑篇-CSDN博客](https://blog.csdn.net/handsomezhanghui/article/details/111872159)
-
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
 <div class="social-share"></div>
