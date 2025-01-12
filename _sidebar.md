@@ -15,22 +15,22 @@
 
     - [Ubuntu安装cfw并创建桌面图标](/md/sharing/Node1.md)
     - [Ubuntu安装NVM](/md/sharing/Node2.md)
-    - [测试](/md/sharing/测试.md)
+    - [测试](/md/sharing/test.md)
 
   - 📕 服务端笔记
 
-    - [C++ 基础篇01](/md/cpp/基础篇Day%2001.md)
-    - [C++ 基础篇02](/md/cpp/基础篇Day%2002.md)
-    - [C语言 基础篇01](/md/c/C_Note.md)
+    - [C++ 01](/md/cpp/Cpp_Note1.md)
+    - [C++ 02](/md/cpp/Cpp_Note2.md)
+    - [C语言](/md/c/C_Note.md)
 
   - 💭 算法学习
 
-    - [线性规划](/md/math-model/01-第一节：线性规划.md)
-    - [整数规划](/md/math-model/02-第二节：整数规划.md)
+    - [线性规划](/md/math_model/linear_programming.md)
+    - [整数规划](/md/math_model/integer_programming.md)
 
   - 📘 力扣题解
 
-    - [Day 01](/md/2024-leetcode-365/Day240203.md)
+    - [Day 01](/md/leetcode/Day240203.md)
 
   - 📗 前端学习
 
