@@ -103,7 +103,7 @@ git push
 - 接着输入hexo g生成静态文件
 - hexo s开启服务器，正式体验Hexo
 
-![Hexo博客演示](https://cdn.nlark.com/yuque/0/2023/png/29514937/1674180990259-bdd57f93-1d07-4ff1-b9fd-b087ac4776e2.png#averageHue=%23afa79c&clientId=ue17bc221-f25d-4&from=paste&id=u9a311661&originHeight=1434&originWidth=2474&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u03c12f3a-05ac-4161-9b71-33ab0824994&title=)
+![Hexo博客演示](../../assets/img/sharing/hexo_init.jpg)
 访问localhost:4000出现上图所示代表成功了，如果页面一直无法跳转，那么可能端口被占用了。
 
 - 输入hexo server -p 端口号来改变端口号
@@ -180,15 +180,15 @@ git config user.email
 > 这里需要注意.pub文件是通过记事本打开。
 
 ```git
-$ ssh-keygen -t rsa -C "429240967@qq.com"
+$ ssh-keygen -t rsa -C "emailname@qq.com"
 Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/tianqixin/.ssh/id_rsa): 
+Enter file in which to save the key (/Users/username/.ssh/id_rsa): 
 Enter passphrase (empty for no passphrase):    # 直接回车
 Enter same passphrase again:                   # 直接回车
 Your identification has been saved in /Users/tianqixin/.ssh/id_rsa.
 Your public key has been saved in /Users/tianqixin/.ssh/id_rsa.pub.
 The key fingerprint is:
-SHA256:MDKVidPTDXIQoJwoqUmI4LBAsg5XByBlrOEzkxrwARI 429240967@qq.com
+SHA256:MDKVidhahahaTMDSB38QoQJQYLeeI4ILaLaLacEzkxrwARI emailname@qq.com
 The key's randomart image is:
 +---[RSA 3072]----+
 |E*+.+=**oo       |
@@ -205,21 +205,21 @@ The key's randomart image is:
 
 打开`github`，在头像下面点击`settings`，再点击`SSH and GPG keys`，新建一个`SSH`，名字随便取一个都可以，把你的`id_rsa.pub`里面的信息复制进去。如图：
 
-![48840BF0-992F-4CCC-A388-15CB74819D88.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/29514937/1667872981444-0e2f226b-1cdc-449d-bb34-ad4c071055e2.jpeg#averageHue=%23f5f6ec&clientId=u8671209f-2b48-4&from=drop&id=u223bfb4a&originHeight=316&originWidth=599&originalType=binary&ratio=1&rotation=0&showTitle=false&size=36699&status=done&style=none&taskId=u62e1e68c-2ff8-4746-b2dc-0c84d7f7e21&title=)
+![settings.jpg](../../assets/img/sharing/settings.jpg)
 
 左边选择 **SSH and GPG keys**，
 
-![B0589847-A498-4415-8700-252BDE1B20C0.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/29514937/1667873003806-1bf9f7ec-08e1-4015-b415-97087d12e54c.jpeg#averageHue=%23fcf6f5&clientId=u8671209f-2b48-4&from=drop&id=u2339f43e&originHeight=218&originWidth=282&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14303&status=done&style=none&taskId=ubd03a587-c9ac-431d-bc47-e1144280824&title=)
+![SSH and GPG keys.jpg](../../assets/img/sharing/SSH_and_GPG_keys.jpg)
 
 然后点击 **New SSH key** 按钮,
-![106AD534-A38A-47F3-88A3-B7BE3F2FEEF1.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/29514937/1667873121845-566ee956-c29d-4336-bacf-3de2127b9050.jpeg#averageHue=%23faf9f9&clientId=u8671209f-2b48-4&from=drop&id=u8b9a58fb&originHeight=487&originWidth=747&originalType=binary&ratio=1&rotation=0&showTitle=false&size=41283&status=done&style=none&taskId=u63bcc104-aa46-4c66-b24b-8b2b3300a0f&title=)
+![New SSH key.jpg](../../assets/img/sharing/New_SSH_key.jpg)
 
 title 设置标题，可以随便填，粘贴在你电脑上生成的 key。
-![github.png](https://cdn.nlark.com/yuque/0/2022/png/29514937/1667790225194-b9144cec-35fb-41f2-9a33-eabdb561c861.png#averageHue=%23f0e8c0&clientId=u6d077405-84d5-4&from=drop&id=ue3a2f866&originHeight=533&originWidth=914&originalType=binary&ratio=1&rotation=0&showTitle=false&size=39377&status=done&style=none&taskId=u3ab1a99e-55bc-48b9-9d34-585ce60df2c&title=)
+![id_rsa.png](../../assets/img/sharing/id_rsa.png)
 
 添加成功后界面如下所示
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/29514937/1667873083250-48c6d16e-8f1b-43e3-8cd3-2a0c902a94ed.png#averageHue=%23f9f2f0&clientId=u8671209f-2b48-4&from=paste&id=ub0c3f6e8&originHeight=370&originWidth=1099&originalType=url&ratio=1&rotation=0&showTitle=false&size=224147&status=done&style=none&taskId=ubf08511e-987f-4479-bc79-b0b0e95e9d6&title=)
+![image.png](../../assets/img/sharing/ssh_keys.png)
 
 为了验证是否成功，在`git bash`输入以下命令：
 `ssh -T git@github.com`，
@@ -230,10 +230,10 @@ title 设置标题，可以随便填，粘贴在你电脑上生成的 key。
 ```git
 $ ssh -T git@github.com
 The authenticity of host 'github.com (52.74.223.119)' can't be established.
-RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+RSA key fingerprint is SHA256:MDKVidhahahaTMDSB38QoQJQYLeeI4ILaLaLacEzkxrwARI
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes                   # 输入 yes
 Warning: Permanently added 'github.com,52.74.223.119' (RSA) to the list of known hosts.
-Hi tianqixin! You've successfully authenticated, but GitHub does not provide shell access. # 成功信息
+Hi jiangqingyu! You've successfully authenticated, but GitHub does not provide shell access. # 成功信息
 ```
 
 ## 将hexo部署到GitHub
@@ -284,7 +284,7 @@ hexo n "article title"
 
 另外推荐直接使用`有道云`编写`markdown`文章，不仅可以实时预览，还可以快捷的生成`markdown`语法格式，具体效果如下图所示。
 
-![Markdown.png](https://cdn.nlark.com/yuque/0/2022/png/29514937/1667790454349-87624a22-0479-48b0-ab8f-5861634c4f78.png#averageHue=%2337372f&clientId=u6d077405-84d5-4&from=drop&id=dyndU&originHeight=999&originWidth=1373&originalType=binary&ratio=1&rotation=0&showTitle=false&size=716398&status=done&style=none&taskId=u01cb01c1-e38f-492a-aafd-af79e835ea2&title=)
+![Markdown.png](../../assets/img/sharing/markdown.png)
 
 - 在部署之前，安装一个扩展npm i hexo-deployer-git --save
 - 最终通过hexo d -g实现部署。
@@ -295,10 +295,10 @@ hexo n "article title"
 
 > 注意：如果出现了如下图所示情况
 
-![报错](https://cdn.nlark.com/yuque/0/2023/png/29514937/1674181359925-685673d5-5cc6-4160-a9cb-1facdb452bee.png#averageHue=%23fcfcfc&clientId=ue17bc221-f25d-4&from=paste&id=u3dcbc33f&originHeight=900&originWidth=1928&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u99ddf83b-6742-4b60-90b3-57ce866c6b0&title=)
+![报错](../../assets/img/sharing/error_2.jpg)
 
 那需要在`blog>_config.yml`中配置一下`url`和`root`
-![演示](https://cdn.nlark.com/yuque/0/2023/png/29514937/1674181359893-0e063054-1d35-46ed-ad7f-3eb36e2bbc49.png#averageHue=%23232121&clientId=ue17bc221-f25d-4&from=paste&id=u9c172eda&originHeight=176&originWidth=1154&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u9fb69c60-0c8d-440b-98ee-cbb6fd39d41&title=)
+![演示](../../assets/img/sharing/config.jpg)
 
 到此为止，`Hexo`初级搭建就已经完成了。
 
