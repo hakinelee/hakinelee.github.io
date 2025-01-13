@@ -40,6 +40,10 @@
     - [Vue2](/md/vue/vue2.md)
     - [Vue3](/md/vue/vue3.md)
 
+  - 嵌入式学习
+
+    - [STM32F103](/md/embedded/stm32f103.md)
+
   <!-- - 💥 网络安全
 
     - [第1节：杂项 MISC](/md/cyber-security/MISC.md) -->
