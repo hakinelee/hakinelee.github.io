@@ -37,10 +37,10 @@
 
     - [HTML与HTML5](/md/frontend/HTML.md)
     - [CSS基础知识](/md/frontend/CSS.md)
-    - [Vue2](/md/vue/vue2.md)
-    - [Vue3](/md/vue/vue3.md)
+    <!-- - [Vue2](/md/vue/vue2.md)
+    - [Vue3](/md/vue/vue3.md) -->
 
-  - 嵌入式学习
+  - 📘 嵌入式学习
 
     - [STM32F103](/md/embedded/stm32f103.md)
 
