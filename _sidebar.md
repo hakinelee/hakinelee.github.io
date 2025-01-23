@@ -7,9 +7,9 @@
 
 - :memo: 目录
 
-  <!-- - 😉 日常
+  - 😉 日常
 
-    - [新年快乐🧨🎆🎇](/md/daily/爱在钟声里.md) -->
+    - [新年快乐🧨🎆🎇](/md/daily/爱在钟声里.md)
   
   - 📖 技术分享
 
@@ -17,6 +17,11 @@
     - [Ubuntu 安装 NVM](/md/sharing/Note2.md)
     - [GitHub Page + Hexo 博客](/md/sharing/Note3.md)
     - [测试](/md/sharing/test.md)
+
+  - 📗 前端学习
+
+    - [HTML 与 HTML5](/md/frontend/HTML.md)
+    - [CSS 基础知识](/md/frontend/CSS.md)
 
   - 📕 服务端笔记
 
@@ -33,22 +38,11 @@
 
     - [Day 01](/md/leetcode/Day240203.md)
 
-  - 📗 前端学习
-
-    - [HTML 与 HTML5](/md/frontend/HTML.md)
-    - [CSS 基础知识](/md/frontend/CSS.md)
-    <!-- - [Vue2](/md/vue/vue2.md)
-    - [Vue3](/md/vue/vue3.md) -->
-
-  - 📘 嵌入式学习
+  - 💥 嵌入式学习
 
     - [STM32F103](/md/embedded/stm32f103.md)
     - [FPGA 实验](/md/fpga/FPGA_test.md)
     - [FPGA 考核](/md/fpga/FPGA_exam.md)
     - [FPGA 实训](/md/fpga/FPGA_training.md)
-
-  <!-- - 💥 网络安全
-
-    - [第1节：杂项 MISC](/md/cyber-security/MISC.md) -->
 
   - 暂无更多...
