@@ -13,8 +13,8 @@
   
   - 📖 技术分享
 
-    - [Ubuntu安装cfw并创建桌面图标](/md/sharing/Note1.md)
-    - [Ubuntu安装NVM](/md/sharing/Note2.md)
+    - [Ubuntu 安装 cfw 并创建桌面图标](/md/sharing/Note1.md)
+    - [Ubuntu 安装 NVM](/md/sharing/Note2.md)
     - [GitHub Page + Hexo 博客](/md/sharing/Note3.md)
     - [测试](/md/sharing/test.md)
 
@@ -35,14 +35,17 @@
 
   - 📗 前端学习
 
-    - [HTML与HTML5](/md/frontend/HTML.md)
-    - [CSS基础知识](/md/frontend/CSS.md)
+    - [HTML 与 HTML5](/md/frontend/HTML.md)
+    - [CSS 基础知识](/md/frontend/CSS.md)
     <!-- - [Vue2](/md/vue/vue2.md)
     - [Vue3](/md/vue/vue3.md) -->
 
   - 📘 嵌入式学习
 
     - [STM32F103](/md/embedded/stm32f103.md)
+    - [FPGA 实验](/md/fpga/FPGA_test.md)
+    - [FPGA 考核](/md/fpga/FPGA_exam.md)
+    - [FPGA 实训](/md/fpga/FPGA_training.md)
 
   <!-- - 💥 网络安全
 
