@@ -781,3 +781,10 @@ endmodule
 ### 五、实验心得
 设计DDS信号发生器是一个具有挑战性的项目，但也为我提供了很多学习的机会。我深入了解了DDS的工作原理、Verilog HDL的编程技巧以及硬件设计和测试的方法。编写Verilog代码时，我注意到了模块化设计的重要性。通过将DDS的不同部分（如相位累加器、查找表和DAC模型）封装成独立的模块，我可以更容易地测试和调试每个部分。通过这个项目，我不仅提高了我的技术能力，还学会了如何解决实际问题并不断优化我的解决方案。我相信这些经验将对我未来的学习和工作产生积极的影响。
 
+> 部分素材来源于网络，如疏漏未标注原文地址或侵权，请联系进行删除。
+> 
+> [更多内容，请至CSDN查看。](https://blog.csdn.net/m0_66166747/article/details/145313737)
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<div class="social-share"></div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>

@@ -1,64 +1,69 @@
 > 可编程器件与硬件描述语言（Verilog HDL）期末考核：高速除法器，基于Altera DE2-115 教育开发板
 >
-> ![](https://cdn.nlark.com/yuque/0/2025/jpeg/29514937/1737563686096-dfaab638-bd08-4df9-94d6-e517bee6851f.jpeg)
+> ![DE2-115](https://cdn.nlark.com/yuque/0/2025/jpeg/29514937/1737563686096-dfaab638-bd08-4df9-94d6-e517bee6851f.jpeg)
 >
 
 ## 期末考核：高速除法器
+
 ### 一、实验目的
+
 1. 掌握移位加减算法设计除法运算单元的基本思想；
 2. 掌握阵列算法除法运算单元的设计方法；
 3. 了解和掌握硬件除法器的结构和工作原理；
 4. 分析除法器的仿真波形和工作时序。
 
 ### 二、实验原理
+
 除法器算法的思路和手写除法基本一致。假设被除数a、除数b是输入的两个位数都为n的二进制数。如果位数小于n，可以在位数较少的数的前面添加0来满足这种位数要求。商和余数是n位标准矢量类型的二进制数。在过程中，算法也是按顺序执行的，但是综合后系统将会由组合逻辑电路组成，进程中的每一步都和系统构建的不同级别的逻辑电路相对应。首先，从输入信号中创建变量A和B，A=a，B=b，其中a、b都是n位二进制数。如果A大于等于B，则商为1，余数为A-B，否则商为0，余数为A。这是算法开始的第一次循环，如果小于B，结果商位是0，A的值不做变化并保留其值。否则，结果商位为1，则把相减后的余数插入变量A中。不管比较结果如何，变量A都要右移一位（左边添加0），接着开始下一次循环。循环n次之后，n位结果赋给商，最后A剩余的值就是余数。
 
 ### 三、实验任务
+
 用Verilog HDL设计一个高速除法器，其中A和B分别为除法器输入端的两个7位数据，他们分别为被除数和除数。输出结果分成两部分：qu是商，re是余数。用7位动态数码管分别显示被除数、除数、商、余数。
 
 ### 四、实验结果与分析
+
 **Verilog HDL程序：**
 
 ```verilog
 module div16 (
-  	input rst, 
-  	input [6:0] a, b, 
-  	output reg [6:0] qu, re,
-  	output reg [6:0] hex7, hex6, hex5, hex4, hex3, hex2, hex1, hex0);
-  	// hex7,hex6 --> a  被除数	hex5,hex4 --> b  除数
-  	// hex3,hex2 --> qu 商		hex1,hex0 --> re 余数
-  	reg [6:0] at, bt, p, q;
-  	integer i;
+   input rst, 
+   input [6:0] a, b, 
+   output reg [6:0] qu, re,
+   output reg [6:0] hex7, hex6, hex5, hex4, hex3, hex2, hex1, hex0);
+   // hex7,hex6 --> a  被除数 hex5,hex4 --> b  除数
+   // hex3,hex2 --> qu 商  hex1,hex0 --> re 余数
+   reg [6:0] at, bt, p, q;
+   integer i;
     always@ (rst or a or b) begin
-    		p = 7'b0000000;
-    		if (!rst) begin
-      			at = 7'b0000000;			bt = 7'b0000000;			q = 7'b0000000;
-    		end
-    		else if (b == 7'b0000000)			
+      p = 7'b0000000;
+      if (!rst) begin
+         at = 7'b0000000;   bt = 7'b0000000;   q = 7'b0000000;
+      end
+      else if (b == 7'b0000000)   
             q = 7'b0000000;
-    		else if (a == b)
+      else if (a == b)
             q = 7'b0000001;
-    		else if(a < b) begin
-      			q = 7'b0000000;			p = a;
-    		end
-    		else begin
-      			at = a;			bt = b;			q = 7'b0000000;
-      			for (i = 6; i >= 0; i = i - 1) begin
-        				p = {p[5:0], at[6]};
-        				at = {at[5:0], 1'b0};
-        				p = p - bt;
-        				if (p[6] == 1) begin
-          					q[i] = 0;					p = p + bt;
-        				end
-        				else 	q[i] = 1;
-      			end
-    		end
-  	end
+      else if(a < b) begin
+         q = 7'b0000000;   p = a;
+      end
+      else begin
+         at = a;   bt = b;   q = 7'b0000000;
+         for (i = 6; i >= 0; i = i - 1) begin
+            p = {p[5:0], at[6]};
+            at = {at[5:0], 1'b0};
+            p = p - bt;
+            if (p[6] == 1) begin
+               q[i] = 0;     p = p + bt;
+            end
+            else  q[i] = 1;
+         end
+      end
+   end
     always@ (*) begin
-    		qu = q;	// 商
-    		re = p; // 余数
-    		case(q%10)	// 取个位
-        		0: hex2 <= 7'b1000000;
+      qu = q; // 商
+      re = p; // 余数
+      case(q%10) // 取个位
+          0: hex2 <= 7'b1000000;
             1: hex2 <= 7'b1111001;
             2: hex2 <= 7'b0100100;
             3: hex2 <= 7'b0110000;
@@ -69,9 +74,9 @@ module div16 (
             8: hex2 <= 7'b0000000;
             9: hex2 <= 7'b0010000;
             default: hex2 <= 7'b1000000;
-    		endcase	
-        case((q/10)%10)	  // 取十位
-        		0: hex3 <= 7'b1000000;
+      endcase 
+        case((q/10)%10)   // 取十位
+          0: hex3 <= 7'b1000000;
             1: hex3 <= 7'b1111001;
             2: hex3 <= 7'b0100100;
             3: hex3 <= 7'b0110000;
@@ -82,9 +87,9 @@ module div16 (
             8: hex3 <= 7'b0000000;
             9: hex3 <= 7'b0010000;
             default: hex3 <= 7'b1000000;
-    		endcase	
-        case(p%10)	// 取个位
-      			0: hex0 <= 7'b1000000;
+      endcase 
+        case(p%10) // 取个位
+         0: hex0 <= 7'b1000000;
             1: hex0 <= 7'b1111001;
             2: hex0 <= 7'b0100100;
             3: hex0 <= 7'b0110000;
@@ -95,9 +100,9 @@ module div16 (
             8: hex0 <= 7'b0000000;
             9: hex0 <= 7'b0010000;
             default: hex0 <= 7'b1000000;
-    		endcase	
-        case((p/10)%10)	  // 取十位
-      			0: hex1 <= 7'b1000000;
+      endcase 
+        case((p/10)%10)   // 取十位
+         0: hex1 <= 7'b1000000;
             1: hex1 <= 7'b1111001;
             2: hex1 <= 7'b0100100;
             3: hex1 <= 7'b0110000;
@@ -108,11 +113,11 @@ module div16 (
             8: hex1 <= 7'b0000000;
             9: hex1 <= 7'b0010000;
             default: hex1 <= 7'b1000000;
-    		endcase	
+      endcase 
     end
     always@ (a or b) begin
-      	case(a%10)	// 取个位
-      			0: hex6 <= 7'b1000000;
+       case(a%10) // 取个位
+         0: hex6 <= 7'b1000000;
             1: hex6 <= 7'b1111001;
             2: hex6 <= 7'b0100100;
             3: hex6 <= 7'b0110000;
@@ -123,9 +128,9 @@ module div16 (
             8: hex6 <= 7'b0000000;
             9: hex6 <= 7'b0010000;
             default: hex6 <= 7'b1000000;
-    		endcase	
-        case((a/10)%10)	  // 取十位
-      			0: hex7 <= 7'b1000000;
+      endcase 
+        case((a/10)%10)   // 取十位
+         0: hex7 <= 7'b1000000;
             1: hex7 <= 7'b1111001;
             2: hex7 <= 7'b0100100;
             3: hex7 <= 7'b0110000;
@@ -136,9 +141,9 @@ module div16 (
             8: hex7 <= 7'b0000000;
             9: hex7 <= 7'b0010000;
             default: hex7 <= 7'b1000000;
-    		endcase	
-        case(b%10)	// 取个位
-      			0: hex4 <= 7'b1000000;
+      endcase 
+        case(b%10) // 取个位
+         0: hex4 <= 7'b1000000;
             1: hex4 <= 7'b1111001;
             2: hex4 <= 7'b0100100;
             3: hex4 <= 7'b0110000;
@@ -149,9 +154,9 @@ module div16 (
             8: hex4 <= 7'b0000000;
             9: hex4 <= 7'b0010000;
             default: hex4 <= 7'b1000000;
-    		endcase	
-        case((b/10)%10)	  // 取十位
-      			0: hex5 <= 7'b1000000;
+      endcase 
+        case((b/10)%10)   // 取十位
+         0: hex5 <= 7'b1000000;
             1: hex5 <= 7'b1111001;
             2: hex5 <= 7'b0100100;
             3: hex5 <= 7'b0110000;
@@ -162,8 +167,8 @@ module div16 (
             8: hex5 <= 7'b0000000;
             9: hex5 <= 7'b0010000;
             default: hex5 <= 7'b1000000;
-    		endcase	
-  	end
+      endcase 
+   end
 endmodule
 ```
 
@@ -185,7 +190,15 @@ endmodule
 通过多次实验仿真，发现该除法器在大多数情况下都能正确计算出商和余数。但在某些极端情况下（如被除数或除数为0时），可能会出现溢出或计算错误的情况。这可能是由于我们设计的除法器位数有限且未考虑溢出处理机制所导致的。更改数据位数或增加限制条件成功解决问题。
 
 ### 五、实验心得
+
 通过本次EDA实验，成功地设计并实现了一个7位高速除法器。该除法器在大多数情况下都能正确计算出商和余数，并具有较好的性能表现。但在某些极端情况下可能会出现溢出或计算错误的情况，需要进一步完善和优化设计。
 
 本次实验不仅加深了我对数字电路和硬件描述语言的理解和应用能力，还提高了我的EDA设计和仿真验证能力。在未来的学习和工作中，可以将这种知识和技能应用于更复杂的数字电路设计和实现中。
 
+> 部分素材来源于网络，如疏漏未标注原文地址或侵权，请联系进行删除。
+> 
+> [更多内容，请至CSDN查看。](https://blog.csdn.net/m0_66166747/article/details/145313457)
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<div class="social-share"></div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
