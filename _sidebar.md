@@ -16,8 +16,9 @@
     - [Ubuntu 安装 cfw 并创建桌面图标](/md/sharing/Note1.md)
     - [Ubuntu 安装 NVM](/md/sharing/Note2.md)
     - [GitHub Page + Hexo 博客](/md/sharing/Note3.md)
-    - [测试](/md/sharing/test.md)
-
+    - [欧盟标准关键日期](/md/test/Note1.md)
+    - [空白](/md/test/Note2.md)
+  
   - 📗 前端学习
 
     - [HTML 与 HTML5](/md/frontend/HTML.md)
