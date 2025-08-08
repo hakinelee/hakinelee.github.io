@@ -7,9 +7,14 @@
 
 - :memo: 目录
 
-  - 😉 日常
+  <!-- - 😉 日常
 
-    - [新年快乐🧨🎆🎇](/md/daily/爱在钟声里.md)
+    - [摆烂](/md/daily/摆烂ing.md)
+    - [新年快乐🧨🎆🎇](/md/daily/爱在钟声里.md) -->
+  
+  - 📖 测试标准
+  
+    - [EN 303 687](/md/test/EN303687.md)
   
   - 📖 技术分享
 
@@ -30,7 +35,7 @@
     - [C++ 02](/md/cpp/Cpp_Note2.md)
     - [C语言](/md/c/C_Note.md)
 
-  - 💭 算法学习
+  <!-- - 💭 算法学习
 
     - [线性规划](/md/math_model/linear_programming.md)
     - [整数规划](/md/math_model/integer_programming.md)
@@ -44,6 +49,6 @@
     - [STM32F103](/md/embedded/stm32f103.md)
     - [FPGA 实验](/md/fpga/FPGA_test.md)
     - [FPGA 考核](/md/fpga/FPGA_exam.md)
-    - [FPGA 实训](/md/fpga/FPGA_training.md)
+    - [FPGA 实训](/md/fpga/FPGA_training.md) -->
 
   - 暂无更多...
